@@ -1,17 +1,25 @@
 import random
 
+score = 0
 
 while True:
     user = input("Higher or lower than 0? -> ")
     number = random.randint(1,10) * random.choice([-1,1])
-    if number < 0 and user == "lower":
+    if number < 0 and user == "l":
         print("winner!", number)
-    if number < 0 and user == "higher":
+        score += 1
+    if number < 0 and user == "h":
         print("loser!", number)
-    if number > 0 and user == "lower":
+        if score > 0:
+            score -= 1
+    if number > 0 and user == "l":
         print("loser!", number)
-    if number > 0 and user == "higher":
+        if score > 0:
+            score -= 1
+    if number > 0 and user == "h":
         print("winner!", number)
-    loop = input("Again? Yes/No -> ")
-    if loop == "no":
+        score += 1
+    print(f"The score is: {score}")
+    loop = input("Again? y/n -> ")
+    if loop == "n":
         break
