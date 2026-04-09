@@ -1,6 +1,6 @@
 import random
 
-score = 0
+score = 10
 
 while True:
     user = input("Higher or lower than 0? -> ")
