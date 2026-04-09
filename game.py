@@ -2,7 +2,7 @@ import random
 
 score = 10
 
-money = 1
+money = 0
 while True:
     print(f"You have {money} $")
     user = input("Higher or lower than 0? -> ")
