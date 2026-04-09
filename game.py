@@ -1,5 +1,6 @@
 import random
 
+score = 10
 
 money = 1
 while True:
